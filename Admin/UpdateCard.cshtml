@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "UpdateCard";
+    Layout = "~/Views/Shared/AdminMaster.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <form action="/Admin/UpdateCard" method="post" enctype="multipart/form-data">
+            
+        Photo
+    <input type="file" name="Profile" value="@Model.Profile" class="form-control"/><br />
+       <img src="../Content/Image/@Model.Profile" height="50" /><br />
+             Title
+<input type="hidden" name="Title" value="@Model.Title" class="form-control"/><br />
+        Paragraph
+        <input type="text" value="@Model.Paragraph" class="form-control" name="Paragraph"/><br />
+        Update
+        <input type="text" value="@Model.Update" class="form-control" name="Update"/><br />
+                
+        <button class="btn btn-success">Update Card</button>
+            <a href="/Admin/CardDisplay" class="btn btn-warning">Display Card</a>
+        </form>
+    </div>
+    <div class="col-md-3"></div>
+
+</div>
+

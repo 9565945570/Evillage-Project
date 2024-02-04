@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "CardDisplay";
+    Layout = "~/Views/Shared/AdminMaster.cshtml";
+}
+@model List<EvillageProjectEntity.Models.tbl_photo>
+
+     <div class="row row-cols-1 row-cols-md-3 g-4">
+     @{
+        
+           foreach(var d in Model)
+           {
+                
+           <div class="col">
+    <div class="card h-100">
+      <img src="../Content/Image/@d.Profile" class="card-img-top" alt="..." height="350" width="350"/>
+      <div class="card-body">
+        <h5 class="card-title">@d.Title</h5>
+        <p class="card-text">@d.Paragraph</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">@d.Update</small>
+      </div>
+        <a href="/Admin/DeleteCard?dt=@d.Title" class="btn btn-danger">Delete</a>
+        <a href="/Admin/UpdateCard?Update=@d.Title" class="btn btn-success">Update Card</a>
+
+    </div>
+  </div>
+           }
+           }
+ </div>

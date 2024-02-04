@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "DisplayReg";
+    Layout = "~/Views/Shared/AdminMaster.cshtml";
+}
+
+
+@*@model List<EvillageProjectEntity.Models.tbl_register1>*@
+
+<div class="table-responsive"">
+<table class="table table-bordered table-striped border-info">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Father Name</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>Profile</th>
+        <th>Mobile number</th>
+        <th>Pin Code</th>
+        <th>Password</th>
+        <th>Confirm Password</th>
+        <th>Address</th>
+        <th>Delete</th>
+        <th>Update<th>
+    </tr>
+    @{
+        foreach(var d in Model)
+        {
+        <tr>
+        <td>@d.Id</td>
+        <td>@d.Name</td>
+        <td>@d.Fname</td>
+        <td>@d.Gender</td>
+        <td>@d.Email</td>
+           <td><img src="../Content/Image/@d.Profile" height="50"/></td> 
+        <td>@d.Mob</td>
+        <td>@d.PinCode</td>
+        <td>@d.Password</td>
+        <td>@d.Cpassword</td>
+        <td>@d.Address</td>         
+        <td><a  href="/Admin/deletereg?dt=@d.Email">Delete</a></td>
+        <td>Update<td>
+        </tr>
+        }
+        }
+</table>
+    </div>      

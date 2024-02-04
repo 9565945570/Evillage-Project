@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Addmsg";
+    Layout = "~/Views/Shared/AdminMaster.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <h2 class="text-success text-center">Write some message</h2>
+        <form action="/Admin/Addmsg" method="post">
+        Enter Your Message
+        <input type="text" name="Message" class="form-control" /><br />
+            <button class="btn btn-success">Add Message</button>
+            <a href="/Admin/msgdisplay" class="btn btn-info">display Message</a>
+
+    </form>
+            </div>
+    <div class="col-md-3"></div>
+</div>

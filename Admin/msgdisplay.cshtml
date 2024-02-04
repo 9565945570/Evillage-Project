@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "msgdisplay";
+    Layout = "~/Views/Shared/AdminMaster.cshtml";
+}
+
+@model List<EvillageProjectEntity.Models.tbl_msg>
+
+@{
+    foreach(var m in Model)
+    {
+        <ul type="none">
+            <li>
+                <a href="#">
+    @m.Message
+                    </a>
+                </li>
+            </ul>
+    }
+    }
