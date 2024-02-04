@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Registration";
+    Layout = "~/Views/Shared/MasterPage.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-3 header"></div>
+    <div class="col-md-6 img ">
+        <form action="/Home/Registration" method="post" enctype="multipart/form-data">
+        Name 
+        <input type="text" class="form-control" name="Name"/>
+         Father Name
+        <input type="text" class="form-control" name="FName"/>
+         Gender:
+        <input type="radio" name="Gender" value="Male"/>Male
+        <input type="radio" name="Gender" value="Female"/>Female
+        <input type="radio" name="Gender" value="Other"/>Other<br />
+         Email
+        <input type="Email" class="form-control" name="Email"/>
+             Profile
+                    <input type="file" class="form-control" name="Profile"/>
+            <div class="row">
+                <div class="col-md-6">
+         Mobile Number
+        <input type="Number" class="form-control" name="Mob"/>
+                   
+                </div>
+         <div class="col-md-6">
+         Pin Code
+        <input type="Number" class="form-control" name="PinCode"/>
+         </div>
+         </div>
+            Password
+            <input type="password" class="form-control" name="Password"/>
+           Confirm Password
+            <input type="password" class="form-control" name="Cpassword"/>
+         Address
+        <textarea class="form-control" name="Address"></textarea>
+        
+        <button class="form-control btn btn-success">Submit</button>
+        </form>
+    </div>
+    <div class="col-md-3 header"></div>
+</div>

@@ -1,0 +1,114 @@
+﻿@{
+    ViewBag.Title = "PhotoGallery";
+    Layout = "~/Views/Shared/MasterPage.cshtml";
+}
+<hr />
+
+
+
+
+
+<div class="row" style="min-height:100px;">
+    <h1 style="box-shadow:0px 2px 1px 3px black; text-align:center; letter-spacing:3px; text-shadow:2px 3px 3px white;" class="bg-success">some pics of my village</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <img src="/content/image/1.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">field</h5>
+        <p class="card-text">the purpose of such close proximity is protection and also to strengthen social bonds. generally, the village doesn't have its own local laws. 
+</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="/content/image/2.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">farm</h5>
+        <p class="card-text">most villages grow in a location that has, or had, particular advantages to the community. long ago, villages often developed near rivers or other sources of fresh water. </p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="/content/image/3.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">road</h5>
+        <p class="card-text">in most parts of the world, villages are settlements of people clustered around a central point. </p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <img src="/content/image/about1.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">house</h5>
+        <p class="card-text">some geographers define a village as having between 500 and 2,500 inhabitants.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="/content/image/about2.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">house</h5>
+        <p class="card-text">a village is a small settlement that is usually located in a rural area. it is generally larger than a hamlet but smaller than a town.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="/content/image/about3.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">home</h5>
+        <p class="card-text">a village is a clustered human settlement or community, larger than a hamlet but smaller than a town with a population typically ranging from a few hundred</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <br />
+     <div class="row row-cols-1 row-cols-md-3 g-4">
+     @{
+        
+           foreach(var d in Model)
+           {
+                
+           <div class="col">
+    <div class="card h-100">
+      <img src="../Content/Image/@d.Profile" class="card-img-top" alt="..." height="350" width="350">
+      <div class="card-body">
+        <h5 class="card-title">@d.Title</h5>
+        <p class="card-text">@d.Paragraph</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">@d.Update</small>
+      </div>
+    </div>
+  </div>
+           }
+           }
+                    </div>
+     </div>
